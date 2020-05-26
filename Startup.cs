@@ -12,6 +12,9 @@ using CarRentalProject.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Http;
+using CarRentalProject.ActionFilters;
+using System.Security.Claims;
 
 namespace CarRentalProject
 {
@@ -36,6 +39,17 @@ namespace CarRentalProject
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultUI()
                 .AddDefaultTokenProviders();
+          
+            services.AddControllersWithViews();
+            services.AddRazorPages();
+            services.AddSignalR();
+            services.AddScoped<ClaimsPrincipal>(s =>
+                  s.GetService<IHttpContextAccessor>().HttpContext.User);
+            services.AddControllers(config =>
+            {
+                config.Filters.Add(typeof(GlobalRouting));
+
+            });
 
 
 
