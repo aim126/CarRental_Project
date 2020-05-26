@@ -4,6 +4,7 @@ using System.Text;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using CarRentalProject.Models;
 
 namespace CarRentalProject.Data
 {
@@ -32,6 +33,8 @@ namespace CarRentalProject.Data
 
 
         }
+        public DbSet<CarRentalProject.Models.RentalOrder> RentalOrder { get; set; }
+        public DbSet<CarRentalProject.Models.Reservation> Reservation { get; set; }
 
 
     }

@@ -17,6 +17,9 @@ namespace CarRentalProject.Models
         public string EmailAddress { get; set; }
         public string CarType { get; set; } // is it Economic, Standard,Compact,Van, or a truck ?
         public string CarLocation { get; set; }
+        public string CarPickupDate { get; set; }
+        public string CarReturnDate { get; set; }
+        public string CarReturnLocation { get; set; }
 
         [ForeignKey("IdentityUser")]
         public string IdentityUserId { get; set; }

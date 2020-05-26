@@ -4,14 +4,16 @@ using CarRentalProject.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CarRentalProject.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200526165422_RentaOrders.cs")]
+    partial class RentaOrderscs
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -95,8 +97,8 @@ namespace CarRentalProject.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "7dc40dfc-8b57-49fc-a2b0-29bc4ea2d3dc",
-                            ConcurrencyStamp = "6582fbd5-83b2-40cf-a45e-57e4d43ef687",
+                            Id = "b10764a0-0bc2-4e7f-9161-6eb05288f161",
+                            ConcurrencyStamp = "4975f65d-2341-4423-be43-959f4014de3b",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });
