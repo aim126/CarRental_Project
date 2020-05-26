@@ -10,8 +10,9 @@ namespace CarRentalProject.Models
     public class RentalOrder
     {
         [Key]
-        public string CarType { get; set; }
 
+        public string CustomerID { get; set; }
+        public string CarType { get; set; }
         public string PickUpDate { get; set; }
         public string ReturnDate { get; set; }
         public int Odometer { get; set; }

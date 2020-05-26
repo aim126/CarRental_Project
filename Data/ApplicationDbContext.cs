@@ -35,6 +35,7 @@ namespace CarRentalProject.Data
         }
         public DbSet<CarRentalProject.Models.RentalOrder> RentalOrder { get; set; }
         public DbSet<CarRentalProject.Models.Reservation> Reservation { get; set; }
+        public DbSet<CarRentalProject.Models.Customer> Customer { get; set; }
 
 
     }

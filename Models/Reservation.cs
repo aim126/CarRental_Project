@@ -10,9 +10,11 @@ namespace CarRentalProject.Models
     {
         [Key]
 
+
+        public string CustomerId { get; set; }
         public string CarType { get; set; }
         public string CarPickupDate { get; set; }
-        public string CarRequierdDays { get; set; }
+        public string NumberOfDaysNeeded { get; set; }
         public string CarPIckupLocation { get; set; }
         public string CarReturnLocation { get; set; }
     }
