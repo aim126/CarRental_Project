@@ -10,7 +10,7 @@ using CarRentalProject.ActionFilters;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
 
-namespace CarRentalProject
+namespace CarRental
 {
     public class Startup
     {
@@ -72,8 +72,11 @@ namespace CarRentalProject
 
             app.UseRouting();
 
-            app.UseAuthentication();
+            
             app.UseAuthorization();
+           
+            
+                
 
             app.UseEndpoints(endpoints =>
             {

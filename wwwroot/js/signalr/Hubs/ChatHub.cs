@@ -4,7 +4,7 @@ using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace signaIrChat.Hubs
+namespace SignaIRChat.Hubs
 {
     public class ChatHub : Hub
     {
@@ -13,5 +13,8 @@ namespace signaIrChat.Hubs
             await Clients.All.SendAsync("ReceiveMessage,user, message");
         }
     }
-
+        public async SendMessage(string employee , string message)
+        {
+        await Clients.All.SendMessage("ReplyMessage,employee, message"); 
+        }
 }
