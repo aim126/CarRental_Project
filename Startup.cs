@@ -10,6 +10,7 @@ using CarRentalProject.ActionFilters;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
 
+
 namespace CarRental
 {
     public class Startup
@@ -47,10 +48,10 @@ namespace CarRental
 
 
 
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddControllersWithViews();
-            services.AddRazorPages();
+          /// services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+          //      .AddEntityFrameworkStores<ApplicationDbContext>();
+         //   services.AddControllersWithViews();
+         //   services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -74,7 +75,7 @@ namespace CarRental
 
             
             app.UseAuthorization();
-           
+            app.UseAuthentication();
             
                 
 
@@ -84,7 +85,7 @@ namespace CarRental
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
-                endpoints.MapHub<ChatHub>("/chatHub");
+           //     endpoints.MapHub<ChatHub>("/chatHub");
             });
         }
     }
