@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.SignalR;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace SignalRChat.Hubs
     {
         public async Task SendMessage(string user, string message)
         {
-            await Clients.all.SendAsync("ReceiveMessage", user, message);
+     //       await Clients.all.SendAsync("ReceiveMessage", user, message);
         }
         
         

@@ -7,10 +7,10 @@ namespace CarRentalProject.Models
     public class Customer
     {
         [Key]
-        public int Id { get; set; }
-        [Display(Name = "First Name")]
-        public string FirstName { get; set; }
-        [Display(Name = "Last Name")]
+        public int   Id { get; set; }
+
+         public string FirstName { get; set; }
+     
         public string LastName { get; set; }
         [Display(Name = "Address")]
         public string Address { get; set; }
@@ -27,7 +27,7 @@ namespace CarRentalProject.Models
         public string CarPickupDate { get; set; }
         public string CarReturnDate { get; set; }
         public string SearchByReturnLocation{ get; set; }
-        public double SearchBYPriceRange { get; set; }
+        public double SearchByPriceRange { get; set; }
         public int SearchByCarUsage { get; set; } //is it for Work , buisiness , Pleasure or a combination?
         public int SearchByGasMilage { get; set; }
         public int SearchByDistanceMileageDesired { get; set; }

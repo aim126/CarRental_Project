@@ -17,5 +17,5 @@ namespace CarRentalProject.Models
         public string NumberOfDaysNeeded { get; set; }
         public string CarPIckupLocation { get; set; }
         public string CarReturnLocation { get; set; }
-    }
+    }   
 }

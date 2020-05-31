@@ -36,7 +36,7 @@ namespace CarRentalProject.Controllers
 
             var customer = await _context.Customer
                 .Include(c => c.IdentityUser)
-                .FirstOrDefaultAsync(m => m.CustomerId == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (customer == null)
             {
                 return NotFound();
@@ -93,7 +93,7 @@ namespace CarRentalProject.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("CustomerId,FirstName,LastName,Address,City,State,ZipCode,EmailAddress,CarType,CarLocation,CarPickupDate,CarReturnDate,CarReturnLocation,IdentityUserId")] Customer customer)
         {
-            if (id != customer.CustomerId)
+            if (id != customer.Id)
             {
                 return NotFound();
             }
@@ -107,7 +107,7 @@ namespace CarRentalProject.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!CustomerExists(customer.CustomerId))
+                    if (!CustomerExists(customer.Id))
                     {
                         return NotFound();
                     }
@@ -132,7 +132,7 @@ namespace CarRentalProject.Controllers
 
             var customer = await _context.Customer
                 .Include(c => c.IdentityUser)
-                .FirstOrDefaultAsync(m => m.CustomerId == id);
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (customer == null)
             {
                 return NotFound();
@@ -154,7 +154,7 @@ namespace CarRentalProject.Controllers
 
         private bool CustomerExists(int id)
         {
-            return _context.Customer.Any(e => e.CustomerId == id);
+            return _context.Customer.Any(e => e.Id == id);
         }
     }
 }
