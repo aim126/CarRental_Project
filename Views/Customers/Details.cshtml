@@ -54,16 +54,16 @@
             @Html.DisplayFor(model => model.EmailAddress)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CarType)
+            @Html.DisplayNameFor(model => model.SearchByCarType)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CarType)
+            @Html.DisplayFor(model => model.SearchByCarType)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CarLocation)
+            @Html.DisplayNameFor(model => model.SearchByCarLocation)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CarLocation)
+            @Html.DisplayFor(model => model.SearchByCarLocation)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.CarPickupDate)
@@ -78,10 +78,10 @@
             @Html.DisplayFor(model => model.CarReturnDate)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CarReturnLocation)
+            @Html.DisplayNameFor(model => model.SearchByCarLocation)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CarReturnLocation)
+            @Html.DisplayFor(model => model.SearchByCarLocation)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.IdentityUser)
@@ -92,6 +92,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Edit" asp-route-id="@Model.CustomerId">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
