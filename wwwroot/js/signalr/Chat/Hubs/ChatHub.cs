@@ -5,7 +5,7 @@ using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SignalRChat.Hubs
+namespace CarRental.SignalRChat.Hubs
 {
     public class ChatHub : Hub
     {
